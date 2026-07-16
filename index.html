@@ -8,12 +8,44 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
+    <!-- Side Navigation -->
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-content">
+            <button class="sidebar-close" id="sidebarClose">
+                <i class="fas fa-times"></i>
+            </button>
+            <nav class="sidebar-nav">
+                <a href="#home" class="sidebar-link active">
+                    <i class="fas fa-home"></i> Home
+                </a>
+                <a href="#about" class="sidebar-link">
+                    <i class="fas fa-user"></i> About
+                </a>
+                <a href="#services" class="sidebar-link">
+                    <i class="fas fa-briefcase"></i> Services
+                </a>
+                <a href="#projects" class="sidebar-link">
+                    <i class="fas fa-project-diagram"></i> Projects
+                </a>
+                <a href="#contact" class="sidebar-link">
+                    <i class="fas fa-envelope"></i> Contact
+                </a>
+            </nav>
+        </div>
+    </aside>
+
+    <!-- Sidebar Toggle Button -->
+    <button class="sidebar-toggle" id="sidebarToggle">
+        <i class="fas fa-bars"></i>
+    </button>
+
     <!-- Navigation Header -->
     <header>
         <nav>
-            <a href="#home" class="logo">MALIK</a>
+            <a href="#home" class="logo"><i class="fas fa-code"></i> MALIK</a>
             <ul class="nav-links" id="navLinks">
                 <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
                 <li><a href="#services">Services</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#contact">Contact</a></li>
@@ -32,40 +64,126 @@
     <main>
         <!-- Hero Section -->
         <section id="home" class="hero">
-            <h1>Hi, I'm <strong>MALIK SAHIB</strong></h1>
-            <p class="subtitle">Business Software Developer</p>
-            <p class="description">Building Web Apps • WhatsApp Bots • AI Solutions • ERP Tools</p>
-            <div class="hero-buttons">
-                <a href="#projects" class="btn btn-primary">View My Work</a>
-                <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+            <div class="hero-content">
+                <div class="hero-text">
+                    <span class="hero-label">Welcome to MALIK SAHIB</span>
+                    <h1>Building <span class="gradient-text">Enterprise Solutions</span> <br> for Modern Businesses</h1>
+                    <p class="hero-description">Transforming ideas into powerful software. Specializing in Web Applications, AI Solutions, ERP Systems, and WhatsApp Automation.</p>
+                    <div class="hero-buttons">
+                        <a href="#projects" class="btn btn-primary">
+                            <i class="fas fa-arrow-right"></i> View Work
+                        </a>
+                        <a href="#contact" class="btn btn-secondary">
+                            <i class="fas fa-envelope"></i> Get Started
+                        </a>
+                    </div>
+                    <div class="hero-stats">
+                        <div class="stat">
+                            <h4>50+</h4>
+                            <p>Projects Delivered</p>
+                        </div>
+                        <div class="stat">
+                            <h4>30+</h4>
+                            <p>Satisfied Clients</p>
+                        </div>
+                        <div class="stat">
+                            <h4>5+</h4>
+                            <p>Years Experience</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="hero-box">
+                        <i class="fas fa-laptop"></i>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about">
+            <div class="about-container">
+                <h2 class="section-title">About Me</h2>
+                <div class="about-content">
+                    <div class="about-text">
+                        <h3>Professional Software Developer</h3>
+                        <p>With over 5 years of experience in software development, I specialize in creating innovative solutions that drive business growth. My expertise spans across multiple technologies and domains.</p>
+                        <div class="about-skills">
+                            <div class="skill">
+                                <span class="skill-label">Web Development</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 95%"></div>
+                                </div>
+                            </div>
+                            <div class="skill">
+                                <span class="skill-label">AI & Machine Learning</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 85%"></div>
+                                </div>
+                            </div>
+                            <div class="skill">
+                                <span class="skill-label">ERP Systems</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 90%"></div>
+                                </div>
+                            </div>
+                            <div class="skill">
+                                <span class="skill-label">WhatsApp Automation</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 88%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about-image">
+                        <div class="image-placeholder">
+                            <i class="fas fa-user-tie"></i>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
         <!-- Services Section -->
         <section id="services" class="services">
             <div class="services-container">
-                <h2 class="section-title">Services</h2>
-                <p class="section-subtitle">What I offer to businesses</p>
+                <div class="section-header">
+                    <span class="section-label">Services</span>
+                    <h2 class="section-title">What I Offer</h2>
+                    <p class="section-subtitle">Comprehensive solutions tailored to your business needs</p>
+                </div>
                 <div class="services-grid">
                     <div class="service-card">
-                        <div class="service-icon">🌐</div>
+                        <div class="service-icon">
+                            <i class="fas fa-globe"></i>
+                        </div>
                         <h3>Web Applications</h3>
-                        <p>Custom web apps built with modern technologies and best practices</p>
+                        <p>Custom web apps built with modern technologies and best practices for maximum performance</p>
+                        <a href="#contact" class="service-link">Learn More →</a>
                     </div>
                     <div class="service-card">
-                        <div class="service-icon">🤖</div>
+                        <div class="service-icon">
+                            <i class="fas fa-robot"></i>
+                        </div>
                         <h3>WhatsApp Bots</h3>
-                        <p>Automated WhatsApp solutions for business automation</p>
+                        <p>Intelligent WhatsApp automation for customer engagement and business process automation</p>
+                        <a href="#contact" class="service-link">Learn More →</a>
                     </div>
                     <div class="service-card">
-                        <div class="service-icon">🧠</div>
-                        <h3>AI Software</h3>
-                        <p>AI-powered business automation and intelligent systems</p>
+                        <div class="service-icon">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <h3>AI Solutions</h3>
+                        <p>AI-powered systems that leverage machine learning for intelligent decision making</p>
+                        <a href="#contact" class="service-link">Learn More →</a>
                     </div>
                     <div class="service-card">
-                        <div class="service-icon">⚙️</div>
-                        <h3>ERP Tools</h3>
-                        <p>Enterprise resource planning solutions for businesses</p>
+                        <div class="service-icon">
+                            <i class="fas fa-cogs"></i>
+                        </div>
+                        <h3>ERP Systems</h3>
+                        <p>Enterprise resource planning solutions for streamlined business operations</p>
+                        <a href="#contact" class="service-link">Learn More →</a>
                     </div>
                 </div>
             </div>
@@ -73,31 +191,69 @@
 
         <!-- Projects Section -->
         <section id="projects" class="projects">
-            <h2 class="section-title">Featured Projects</h2>
-            <p class="section-subtitle">My best work</p>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <div class="project-image">📦</div>
-                    <div class="project-content">
-                        <h3>MALIK ERP TOOL</h3>
-                        <p>Advanced inventory management and complete ERP system for businesses</p>
-                        <a href="https://malikinventrytool-com.lovable.app" target="_blank" class="project-link">View Project →</a>
-                    </div>
+            <div class="projects-container">
+                <div class="section-header">
+                    <span class="section-label">Portfolio</span>
+                    <h2 class="section-title">Featured Projects</h2>
+                    <p class="section-subtitle">Real-world solutions that delivered results</p>
                 </div>
-                <div class="project-card">
-                    <div class="project-image">💬</div>
-                    <div class="project-content">
-                        <h3>WhatsApp Bot</h3>
-                        <p>Custom WhatsApp automation solutions for customer engagement</p>
-                        <a href="#contact" class="project-link">Learn More →</a>
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <div class="project-image">
+                            <i class="fas fa-warehouse"></i>
+                            <div class="project-badge">Live</div>
+                        </div>
+                        <div class="project-content">
+                            <span class="project-category">ERP System</span>
+                            <h3>MALIK ERP TOOL</h3>
+                            <p>Advanced inventory management and complete ERP system for modern businesses with real-time analytics</p>
+                            <div class="project-tags">
+                                <span class="tag">Node.js</span>
+                                <span class="tag">React</span>
+                                <span class="tag">MongoDB</span>
+                            </div>
+                            <a href="https://malikinventrytool-com.lovable.app" target="_blank" class="project-link">
+                                View Live <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
                     </div>
-                </div>
-                <div class="project-card">
-                    <div class="project-image">💻</div>
-                    <div class="project-content">
-                        <h3>Web Applications</h3>
-                        <p>Full-stack web development services for modern businesses</p>
-                        <a href="#contact" class="project-link">Discuss →</a>
+                    <div class="project-card">
+                        <div class="project-image">
+                            <i class="fas fa-comments"></i>
+                            <div class="project-badge">Active</div>
+                        </div>
+                        <div class="project-content">
+                            <span class="project-category">Automation</span>
+                            <h3>WhatsApp Bot Platform</h3>
+                            <p>Scalable WhatsApp automation platform for customer support and business engagement</p>
+                            <div class="project-tags">
+                                <span class="tag">WhatsApp API</span>
+                                <span class="tag">Python</span>
+                                <span class="tag">AWS</span>
+                            </div>
+                            <a href="#contact" class="project-link">
+                                Learn More <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <div class="project-image">
+                            <i class="fas fa-code"></i>
+                            <div class="project-badge">Available</div>
+                        </div>
+                        <div class="project-content">
+                            <span class="project-category">Development</span>
+                            <h3>Custom Web Solutions</h3>
+                            <p>Full-stack web development for enterprise clients with scalability and security focus</p>
+                            <div class="project-tags">
+                                <span class="tag">Full Stack</span>
+                                <span class="tag">Cloud</span>
+                                <span class="tag">Scalable</span>
+                            </div>
+                            <a href="#contact" class="project-link">
+                                Discuss <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -106,20 +262,45 @@
         <!-- Contact Section -->
         <section id="contact" class="contact">
             <div class="contact-container">
-                <h2 class="section-title">Get In Touch</h2>
-                <p class="section-subtitle">Let's work together</p>
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <h4>📧 Email</h4>
-                        <a href="mailto:akk728492@gmail.com">akk728492@gmail.com</a>
+                <div class="section-header">
+                    <span class="section-label">Get In Touch</span>
+                    <h2 class="section-title">Let's Work Together</h2>
+                    <p class="section-subtitle">Ready to start your next project? Contact me today</p>
+                </div>
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <h4>Email</h4>
+                            <a href="mailto:akk728492@gmail.com">akk728492@gmail.com</a>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-comments"></i>
+                            </div>
+                            <h4>WhatsApp</h4>
+                            <a href="https://wa.me/923322964709" target="_blank">+92 332-2964709</a>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-github"></i>
+                            </div>
+                            <h4>GitHub</h4>
+                            <a href="https://github.com/arkhan998" target="_blank">@arkhan998</a>
+                        </div>
                     </div>
-                    <div class="contact-item">
-                        <h4>💬 WhatsApp</h4>
-                        <a href="https://wa.me/923322964709" target="_blank">0332-2964709</a>
-                    </div>
-                    <div class="contact-item">
-                        <h4>🐙 GitHub</h4>
-                        <a href="https://github.com/arkhan998" target="_blank">@arkhan998</a>
+                    <div class="contact-form-section">
+                        <h3>Send Me a Message</h3>
+                        <form class="contact-form">
+                            <input type="text" placeholder="Your Name" required>
+                            <input type="email" placeholder="Your Email" required>
+                            <textarea placeholder="Your Message" rows="5" required></textarea>
+                            <button type="submit" class="btn btn-primary">
+                                <i class="fas fa-paper-plane"></i> Send Message
+                            </button>
+                        </form>
                     </div>
                 </div>
             </div>
@@ -128,7 +309,37 @@
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2024-2027 MALIK SAHIB. All rights reserved.</p>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>MALIK SAHIB</h4>
+                <p>Professional software solutions for modern businesses</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Connect</h4>
+                <div class="social-links">
+                    <a href="https://github.com/arkhan998" target="_blank">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://wa.me/923322964709" target="_blank">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                    <a href="mailto:akk728492@gmail.com">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024-2027 MALIK SAHIB. All rights reserved. | Building exceptional software solutions</p>
+        </div>
     </footer>
 
     <script src="script.js"></script>
