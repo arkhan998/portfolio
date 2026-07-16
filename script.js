@@ -1,24 +1,48 @@
-// Hamburger Menu Toggle
-const hamburger = document.getElementById('hamburger');
-const navMenu = document.getElementById('navMenu');
+// Sidebar Toggle
+const sidebarToggle = document.getElementById('sidebarToggle');
+const sidebar = document.getElementById('sidebar');
+const sidebarClose = document.getElementById('sidebarClose');
+const sidebarLinks = document.querySelectorAll('.sidebar-link');
 
-hamburger.addEventListener('click', () => {
-    navMenu.classList.toggle('active');
+sidebarToggle.addEventListener('click', () => {
+    sidebar.classList.add('active');
 });
 
-// Close menu when link is clicked
-const navLinks = document.querySelectorAll('.nav-link');
-navLinks.forEach(link => {
+sidebarClose.addEventListener('click', () => {
+    sidebar.classList.remove('active');
+});
+
+sidebarLinks.forEach(link => {
     link.addEventListener('click', () => {
-        navMenu.classList.remove('active');
+        sidebar.classList.remove('active');
+        sidebarLinks.forEach(l => l.classList.remove('active'));
+        link.classList.add('active');
     });
 });
 
-// Smooth Scrolling
-navLinks.forEach(link => {
+// Hamburger Menu Toggle
+const hamburger = document.getElementById('hamburger');
+const navLinks = document.getElementById('navLinks');
+
+hamburger?.addEventListener('click', () => {
+    hamburger.classList.toggle('active');
+    navLinks.classList.toggle('active');
+});
+
+// Close menu when link is clicked
+const navItems = document.querySelectorAll('.nav-links a');
+navItems.forEach(link => {
+    link.addEventListener('click', () => {
+        hamburger?.classList.remove('active');
+        navLinks?.classList.remove('active');
+    });
+});
+
+// Smooth Scrolling for all links
+document.querySelectorAll('a[href^="#"]').forEach(link => {
     link.addEventListener('click', (e) => {
         const href = link.getAttribute('href');
-        if (href.startsWith('#')) {
+        if (href !== '#') {
             e.preventDefault();
             const section = document.querySelector(href);
             if (section) {
@@ -32,33 +56,12 @@ navLinks.forEach(link => {
 });
 
 // Dark Mode Toggle
-const themeToggle = document.createElement('button');
-themeToggle.innerHTML = '<i class="fas fa-moon"></i>';
-themeToggle.className = 'theme-toggle';
-themeToggle.style.cssText = `
-    position: fixed;
-    bottom: 30px;
-    right: 30px;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    background: linear-gradient(135deg, #667eea, #764ba2);
-    color: white;
-    border: none;
-    cursor: pointer;
-    font-size: 1.2rem;
-    z-index: 999;
-    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
-    transition: all 0.3s ease;
-`;
-
-document.body.appendChild(themeToggle);
-
-// Check for saved theme preference
+const themeToggle = document.getElementById('themeToggle');
 const currentTheme = localStorage.getItem('theme') || 'light-mode';
+
 if (currentTheme === 'dark-mode') {
     document.body.classList.add('dark-mode');
-    themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+    updateThemeIcon();
 }
 
 themeToggle.addEventListener('click', () => {
@@ -66,25 +69,25 @@ themeToggle.addEventListener('click', () => {
     
     if (document.body.classList.contains('dark-mode')) {
         localStorage.setItem('theme', 'dark-mode');
-        themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
     } else {
         localStorage.setItem('theme', 'light-mode');
-        themeToggle.innerHTML = '<i class="fas fa-moon"></i>';
     }
+    updateThemeIcon();
 });
 
-themeToggle.addEventListener('mouseover', () => {
-    themeToggle.style.transform = 'scale(1.1)';
-});
+function updateThemeIcon() {
+    const icon = themeToggle.querySelector('i');
+    if (document.body.classList.contains('dark-mode')) {
+        icon.className = 'fas fa-sun';
+    } else {
+        icon.className = 'fas fa-moon';
+    }
+}
 
-themeToggle.addEventListener('mouseout', () => {
-    themeToggle.style.transform = 'scale(1)';
-});
-
-// Add scroll animations
+// Intersection Observer for scroll animations
 const observerOptions = {
     threshold: 0.1,
-    rootMargin: '0px 0px -100px 0px'
+    rootMargin: '0px 0px -50px 0px'
 };
 
 const observer = new IntersectionObserver((entries) => {
@@ -96,16 +99,51 @@ const observer = new IntersectionObserver((entries) => {
     });
 }, observerOptions);
 
-// Observe cards
-const cards = document.querySelectorAll('.card, .project-card, .contact-card');
-cards.forEach(card => {
-    card.style.opacity = '0';
-    card.style.transform = 'translateY(20px)';
-    card.style.transition = 'all 0.6s ease';
-    observer.observe(card);
+// Observe all cards and elements
+document.querySelectorAll('.service-card, .project-card, .contact-item, .stat').forEach(el => {
+    el.style.opacity = '0';
+    el.style.transform = 'translateY(20px)';
+    el.style.transition = 'all 0.6s ease';
+    observer.observe(el);
 });
 
+// Contact Form Handler
+const contactForm = document.querySelector('.contact-form');
+if (contactForm) {
+    contactForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        // Basic validation
+        const formData = new FormData(contactForm);
+        console.log('Form submitted:', Object.fromEntries(formData));
+        alert('Thank you for your message! I will get back to you soon.');
+        contactForm.reset();
+    });
+}
+
+// Update active sidebar link on scroll
+window.addEventListener('scroll', () => {
+    const sections = document.querySelectorAll('section[id]');
+    const scrollPosition = window.scrollY + 100;
+
+    sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.offsetHeight;
+        const sectionId = section.getAttribute('id');
+        const link = document.querySelector(`.sidebar-link[href="#${sectionId}"]`);
+
+        if (link) {
+            if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+                document.querySelectorAll('.sidebar-link').forEach(l => l.classList.remove('active'));
+                link.classList.add('active');
+            }
+        }
+    });
+});
+
+// Scroll to top on page load
+window.scrollTo(0, 0);
+
 // Console message
-console.log('%c🚀 Welcome to MALIK SAHIB Portfolio!', 'font-size: 20px; color: #667eea; font-weight: bold;');
-console.log('%cBusiness Software Developer', 'font-size: 14px; color: #764ba2;');
-console.log('%cEmail: akk728492@gmail.com | WhatsApp: 0332-2964709', 'font-size: 12px; color: #f093fb;');
+console.log('%c🚀 MALIK SAHIB - Professional Software Developer', 'font-size: 18px; color: #0066cc; font-weight: bold; text-shadow: 0 0 10px rgba(0, 102, 204, 0.5);');
+console.log('%cEnterprise Solutions | Web Apps | AI | ERP | WhatsApp Automation', 'font-size: 14px; color: #64748b;');
+console.log('%cEmail: akk728492@gmail.com | WhatsApp: +92 332-2964709', 'font-size: 12px; color: #0066cc;');
