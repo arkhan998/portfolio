@@ -42,7 +42,53 @@
     <!-- Navigation Header -->
     <header>
         <nav>
-            <a href="#home" class="logo"><i class="fas fa-code"></i> MALIK</a>
+            <a href="#home" class="logo">
+                <svg class="logo-text" viewBox="0 0 400 120" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <style>
+                            .logo-text-path {
+                                font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+                                font-size: 80px;
+                                font-weight: 800;
+                                fill: none;
+                                stroke: url(#gradientStroke);
+                                stroke-width: 2;
+                                stroke-linecap: round;
+                                stroke-linejoin: round;
+                                filter: drop-shadow(0 0 20px rgba(0, 102, 204, 0.6));
+                            }
+                            @keyframes strokeAnimation {
+                                0% {
+                                    stroke-dashoffset: 1000;
+                                }
+                                100% {
+                                    stroke-dashoffset: 0;
+                                }
+                            }
+                            .animated-stroke {
+                                stroke-dasharray: 1000;
+                                animation: strokeAnimation 3s ease-in-out forwards;
+                            }
+                            @keyframes glowPulse {
+                                0%, 100% {
+                                    filter: drop-shadow(0 0 20px rgba(0, 102, 204, 0.6));
+                                }
+                                50% {
+                                    filter: drop-shadow(0 0 40px rgba(0, 102, 204, 1));
+                                }
+                            }
+                            .glow-effect {
+                                animation: glowPulse 2s ease-in-out infinite;
+                            }
+                        </style>
+                        <linearGradient id="gradientStroke" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#0066cc;stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:#004499;stop-opacity:1" />
+                        </linearGradient>
+                    </defs>
+                    <text x="20" y="100" class="logo-text-path animated-stroke glow-effect">MALIK</text>
+                </svg>
+            </a>
             <ul class="nav-links" id="navLinks">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
@@ -107,7 +153,8 @@
                 <div class="about-content">
                     <div class="about-text">
                         <h3>Professional Software Developer</h3>
-                        <p>With over 5 years of experience in software development, I specialize in creating innovative solutions that drive business growth. My expertise spans across multiple technologies and domains.</p>
+                        <p>With over 5 years of experience in software development, I specialize in creating innovative solutions that drive business growth. My expertise spans across multiple technologies and domains, delivering enterprise-grade applications.</p>
+                        <p>I am passionate about building scalable, secure, and user-friendly software that solves real-world business problems. Every project is an opportunity to create something exceptional.</p>
                         <div class="about-skills">
                             <div class="skill">
                                 <span class="skill-label">Web Development</span>
@@ -158,7 +205,7 @@
                             <i class="fas fa-globe"></i>
                         </div>
                         <h3>Web Applications</h3>
-                        <p>Custom web apps built with modern technologies and best practices for maximum performance</p>
+                        <p>Custom web apps built with modern technologies and best practices for maximum performance and scalability</p>
                         <a href="#contact" class="service-link">Learn More →</a>
                     </div>
                     <div class="service-card">
@@ -166,7 +213,7 @@
                             <i class="fas fa-robot"></i>
                         </div>
                         <h3>WhatsApp Bots</h3>
-                        <p>Intelligent WhatsApp automation for customer engagement and business process automation</p>
+                        <p>Intelligent WhatsApp automation for customer engagement and business process automation at scale</p>
                         <a href="#contact" class="service-link">Learn More →</a>
                     </div>
                     <div class="service-card">
@@ -174,7 +221,7 @@
                             <i class="fas fa-brain"></i>
                         </div>
                         <h3>AI Solutions</h3>
-                        <p>AI-powered systems that leverage machine learning for intelligent decision making</p>
+                        <p>AI-powered systems that leverage machine learning for intelligent decision making and automation</p>
                         <a href="#contact" class="service-link">Learn More →</a>
                     </div>
                     <div class="service-card">
@@ -182,7 +229,7 @@
                             <i class="fas fa-cogs"></i>
                         </div>
                         <h3>ERP Systems</h3>
-                        <p>Enterprise resource planning solutions for streamlined business operations</p>
+                        <p>Enterprise resource planning solutions for streamlined business operations and data management</p>
                         <a href="#contact" class="service-link">Learn More →</a>
                     </div>
                 </div>
@@ -206,7 +253,7 @@
                         <div class="project-content">
                             <span class="project-category">ERP System</span>
                             <h3>MALIK ERP TOOL</h3>
-                            <p>Advanced inventory management and complete ERP system for modern businesses with real-time analytics</p>
+                            <p>Advanced inventory management and complete ERP system for modern businesses with real-time analytics and reporting capabilities</p>
                             <div class="project-tags">
                                 <span class="tag">Node.js</span>
                                 <span class="tag">React</span>
@@ -225,7 +272,7 @@
                         <div class="project-content">
                             <span class="project-category">Automation</span>
                             <h3>WhatsApp Bot Platform</h3>
-                            <p>Scalable WhatsApp automation platform for customer support and business engagement</p>
+                            <p>Scalable WhatsApp automation platform for customer support and business engagement with AI integration</p>
                             <div class="project-tags">
                                 <span class="tag">WhatsApp API</span>
                                 <span class="tag">Python</span>
@@ -244,7 +291,7 @@
                         <div class="project-content">
                             <span class="project-category">Development</span>
                             <h3>Custom Web Solutions</h3>
-                            <p>Full-stack web development for enterprise clients with scalability and security focus</p>
+                            <p>Full-stack web development for enterprise clients with focus on scalability, security, and performance optimization</p>
                             <div class="project-tags">
                                 <span class="tag">Full Stack</span>
                                 <span class="tag">Cloud</span>
@@ -312,7 +359,7 @@
         <div class="footer-content">
             <div class="footer-section">
                 <h4>MALIK SAHIB</h4>
-                <p>Professional software solutions for modern businesses</p>
+                <p>Professional software solutions for modern businesses and enterprises worldwide</p>
             </div>
             <div class="footer-section">
                 <h4>Quick Links</h4>
@@ -320,18 +367,19 @@
                     <li><a href="#home">Home</a></li>
                     <li><a href="#services">Services</a></li>
                     <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
             </div>
             <div class="footer-section">
                 <h4>Connect</h4>
                 <div class="social-links">
-                    <a href="https://github.com/arkhan998" target="_blank">
+                    <a href="https://github.com/arkhan998" target="_blank" title="GitHub">
                         <i class="fab fa-github"></i>
                     </a>
-                    <a href="https://wa.me/923322964709" target="_blank">
+                    <a href="https://wa.me/923322964709" target="_blank" title="WhatsApp">
                         <i class="fab fa-whatsapp"></i>
                     </a>
-                    <a href="mailto:akk728492@gmail.com">
+                    <a href="mailto:akk728492@gmail.com" title="Email">
                         <i class="fas fa-envelope"></i>
                     </a>
                 </div>
