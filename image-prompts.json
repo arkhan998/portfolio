@@ -1,0 +1,155 @@
+{
+  "imagePrompts": [
+    {
+      "id": 1,
+      "name": "Hero Section Background",
+      "location": "Hero Section",
+      "prompt": "Modern abstract tech background with gradient blue and dark colors, geometric shapes, glowing particles, professional business atmosphere, minimalist design, high resolution 4K",
+      "size": "1920x1080",
+      "style": "Modern, Professional, Tech-focused"
+    },
+    {
+      "id": 2,
+      "name": "MALIK Logo Design",
+      "location": "Header & Branding",
+      "prompt": "Professional tech company logo with name 'MALIK' in bold modern font, gradient blue color (#0066cc to #004499), glowing effect, clean minimalist design, perfect for header, transparent background",
+      "size": "400x120",
+      "style": "Modern Logo, Tech, Minimalist"
+    },
+    {
+      "id": 3,
+      "name": "Web Development Service Icon",
+      "location": "Services Section - Web Applications",
+      "prompt": "Web development icon showing laptop with code, blue gradient, modern flat design, professional, 3D effect, isolated on transparent background",
+      "size": "512x512",
+      "style": "Icon, Flat Design, Professional"
+    },
+    {
+      "id": 4,
+      "name": "AI Solutions Icon",
+      "location": "Services Section - AI Solutions",
+      "prompt": "Artificial Intelligence icon with brain and circuit board, glowing blue accent, modern tech design, professional appearance, 3D effect, transparent background",
+      "size": "512x512",
+      "style": "Icon, Tech, Professional"
+    },
+    {
+      "id": 5,
+      "name": "ERP Systems Icon",
+      "location": "Services Section - ERP Systems",
+      "prompt": "Enterprise Resource Planning icon showing interconnected gears and data flow, blue gradient, professional business design, 3D effect, modern style, transparent background",
+      "size": "512x512",
+      "style": "Icon, Business, Professional"
+    },
+    {
+      "id": 6,
+      "name": "WhatsApp Automation Icon",
+      "location": "Services Section - WhatsApp Bots",
+      "prompt": "WhatsApp bot automation icon with robot and chat bubbles, blue gradient accents, modern tech design, professional appearance, 3D style, transparent background",
+      "size": "512x512",
+      "style": "Icon, Automation, Professional"
+    },
+    {
+      "id": 7,
+      "name": "MALIK ERP Project Image",
+      "location": "Projects Section - MALIK ERP TOOL",
+      "prompt": "Inventory management system dashboard screenshot, modern UI with charts and data visualization, blue theme, professional software interface, high-tech appearance, clean design",
+      "size": "800x600",
+      "style": "Product Screenshot, Professional, Modern"
+    },
+    {
+      "id": 8,
+      "name": "WhatsApp Bot Project Image",
+      "location": "Projects Section - WhatsApp Bot",
+      "prompt": "WhatsApp automation platform interface, chat interface with AI bot responses, blue modern design, professional software dashboard, clean UI/UX",
+      "size": "800x600",
+      "style": "Product Screenshot, Modern, Professional"
+    },
+    {
+      "id": 9,
+      "name": "Web Development Project Image",
+      "location": "Projects Section - Custom Web Solutions",
+      "prompt": "Modern web development portfolio showcase with multiple websites displayed, clean responsive design, blue gradient theme, professional tech atmosphere, minimalist style",
+      "size": "800x600",
+      "style": "Product Screenshot, Web Design, Professional"
+    },
+    {
+      "id": 10,
+      "name": "Profile Photo Placeholder",
+      "location": "About Section",
+      "prompt": "Professional business person portrait wearing business suit, modern tech atmosphere background, confident expression, blue gradient background, corporate professional photo, high quality",
+      "size": "400x400",
+      "style": "Professional Portrait, Corporate, Tech"
+    },
+    {
+      "id": 11,
+      "name": "Hero Visual Box Icon",
+      "location": "Hero Section - Visual Element",
+      "prompt": "3D laptop with code on screen, modern minimalist design, blue gradient background, floating effect, professional tech appearance, isolated on light background",
+      "size": "600x600",
+      "style": "3D Icon, Tech, Illustration"
+    },
+    {
+      "id": 12,
+      "name": "About Section Visual",
+      "location": "About Section - Image Placeholder",
+      "prompt": "Professional software developer working on project, modern minimalist illustration, blue gradient theme, tech atmosphere, creative workspace, professional appearance",
+      "size": "400x400",
+      "style": "Illustration, Professional, Tech"
+    },
+    {
+      "id": 13,
+      "name": "Footer Background Pattern",
+      "location": "Footer",
+      "prompt": "Dark tech pattern background with subtle geometric shapes and glowing elements, dark blue/black gradient, professional minimalist design, elegant and sophisticated",
+      "size": "1920x400",
+      "style": "Pattern, Professional, Modern"
+    },
+    {
+      "id": 14,
+      "name": "Contact Section Background",
+      "location": "Contact Section",
+      "prompt": "Abstract tech background with blue gradient and glowing particles, professional business atmosphere, minimalist design, light blue theme, elegant pattern",
+      "size": "1920x1080",
+      "style": "Background, Professional, Tech"
+    },
+    {
+      "id": 15,
+      "name": "Services Section Decorative",
+      "location": "Services Grid Background",
+      "prompt": "Modern tech geometric pattern with blue gradient, subtle glowing elements, professional business design, minimalist style, light background texture",
+      "size": "1920x1080",
+      "style": "Background Pattern, Professional"
+    }
+  ],
+  "instructions": {
+    "how_to_use": "Use these prompts with AI image generators like Midjourney, DALL-E, Stable Diffusion, or Adobe Firefly",
+    "recommended_tools": [
+      "Midjourney (Best quality)",
+      "DALL-E 3 (Professional)",
+      "Stable Diffusion (Free)",
+      "Adobe Firefly (Integration ready)"
+    ],
+    "steps": [
+      "1. Choose an AI image generator",
+      "2. Copy the prompt from this JSON",
+      "3. Adjust size/style parameters",
+      "4. Generate the image",
+      "5. Download and save locally",
+      "6. Upload to your portfolio assets folder"
+    ],
+    "file_naming": "Use the 'name' field for file naming (replace spaces with hyphens, add .png extension)"
+  },
+  "color_palette": {
+    "primary": "#0066cc",
+    "primary_dark": "#004499",
+    "light": "#e6f0ff",
+    "dark": "#0f1419",
+    "text_primary": "#0f172a",
+    "text_secondary": "#64748b"
+  },
+  "quality_settings": {
+    "resolution": "High quality 4K where applicable",
+    "style": "Professional, Modern, Tech-focused",
+    "tone": "Professional, Corporate, Minimalist"
+  }
+}
